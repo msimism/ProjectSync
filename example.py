@@ -1,6 +1,12 @@
 import datetime
+import re
 
-name = input("Enter your name: ")
+name = input("Enter your name: ").strip()
+
+pattern = r'\b[A-Za-z]+\b'
+
+names = re.findall(pattern, name)
+
 current_hour = datetime.datetime.now().hour
 
 if current_hour < 12:
@@ -10,4 +16,5 @@ elif current_hour < 18:
 else:
     greeting = "Good evening"
 
-print(f"{greeting}, {name}!")
+names_list = ', '.join(names)
+print(f"{greeting}, {names_list}!")
