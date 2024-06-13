@@ -1,1 +1,13 @@
-import datetime\n\nname = input("Enter your name: ")\ncurrent_hour = datetime.datetime.now().hour\n\nif current_hour < 12:\n    greeting = "Good morning"\nelif current_hour < 18:\n    greeting = "Good afternoon"\nelse:\n    greeting = "Good evening"\n\nprint(f"{greeting}, {name}!")
+import datetime
+
+name = input("Enter your name: ")
+current_hour = datetime.datetime.now().hour
+
+if current_hour < 12:
+    greeting = "Good morning"
+elif current_hour < 18:
+    greeting = "Good afternoon"
+else:
+    greeting = "Good evening"
+
+print(f"{greeting}, {name}!")
